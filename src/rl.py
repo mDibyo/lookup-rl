@@ -238,10 +238,10 @@ class FunctionDict:
 
 
 if __name__ == '__main__':
-    grid = json.load(open('../data/grids/long_template2.json'))
-    mdp = MDP.from_2d_grid_file('../data/grids/long_template2.json', l1_norm_reward, (38, 3), )
-    pi_lookup = lookup_policy_proportional(mdp, 1.5, 1, 8)
-    visualize_2d_grid_policy(pi_lookup, grid, {1: '_', 8: '*'})
+    grid = json.load(open('../data/grids/long_template.json'))
+    mdp = MDP.from_2d_grid_file('../data/grids/long_template.json', l1_norm_reward, (21, 3), )
+    pi_lookup = lookup_policy_proportional(mdp, 0.8, 1, 10)
+    visualize_2d_grid_policy(pi_lookup, grid, {1: '_', 10: '*'})
 
     # Debugging
     # id_func = lambda x: x
